@@ -16,7 +16,7 @@ if (!defined('WPINC')) { die; }
 
 define('MARKUP_MINIFIER_WP_NAME', 'Markup Minifier WP');
 define('MARKUP_MINIFIER_WP_DESCRIPTION', 'Minify HTML code by removing line breaks and spaces to reduce file size and improve performance.');
-define('MARKUP_MINIFIER_WP_URL', 'https://www.operat.de');
+define('MARKUP_MINIFIER_WP_URL', 'https://github.com/operat/markup-minifier-wp');
 
 require_once 'MarkupMinifierWP.MarkupMinifier.php';
 require_once 'MarkupMinifierWP.PluginManager.php';

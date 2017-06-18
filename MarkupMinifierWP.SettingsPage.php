@@ -26,7 +26,10 @@ class MarkupMinifierWP_SettingsPage {
       ?>
          <div class="wrap">
             <h1><?php echo MARKUP_MINIFIER_WP_NAME; ?></h1>
-            <p><?php echo MARKUP_MINIFIER_WP_DESCRIPTION; ?></p>
+            <p>
+               <b><?php echo MARKUP_MINIFIER_WP_DESCRIPTION; ?></b><br>
+               Find information, report issues and make contributions on <a href="<?php echo MARKUP_MINIFIER_WP_URL; ?>" title="<?php echo MARKUP_MINIFIER_WP_NAME; ?>" target="_blank">GitHub</a>.
+            </p>
             <form method="post" action="options.php">
             <?php
                settings_fields('markup_minifier_wp');
