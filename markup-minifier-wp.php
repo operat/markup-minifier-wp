@@ -4,14 +4,13 @@ Plugin Name: Markup Minifier WP
 Plugin URI: https://github.com/operat/markup-minifier-wp
 GitHub Plugin URI: https://github.com/operat/markup-minifier-wp
 Description: Minify HTML code by removing line breaks and spaces to reduce file size and improve performance.
-Version: 1.0
+Version: 1.1
 Author: Operat
 Author URI: https://www.operat.de
-License: MIT
-License URI: https://opensource.org/licenses/MIT
+License: GNU GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */
 
-// Make sure plugin can't be accessed directly
 if (!defined('WPINC')) { die; }
 
 define('MARKUP_MINIFIER_WP_NAME', 'Markup Minifier WP');
