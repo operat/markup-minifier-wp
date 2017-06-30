@@ -62,9 +62,9 @@ class MarkupMinifierWP_MarkupMinifier {
                }
             }
          } else {
-            if ($tag == 'pre' || $tag == 'textarea') {
+            if ($tag == 'pre' || $tag == 'textarea' || $tag == 'script') {
                $raw_tag = $tag;
-            } else if ($tag == '/pre' || $tag == '/textarea') {
+            } else if ($tag == '/pre' || $tag == '/textarea' || $tag == '/script') {
                $raw_tag = false;
             } else {
                if ($raw_tag || $overriding) {
@@ -83,6 +83,7 @@ class MarkupMinifierWP_MarkupMinifier {
 
          $html .= $content;
       }
+
       return $html;
    }
 
@@ -90,7 +91,7 @@ class MarkupMinifierWP_MarkupMinifier {
       $this->html = $this->minifyHTML($html);
 
       if ($this->info_comment) {
-         $this->html .= " " . $this->bottomComment($html, $this->html);
+         $this->html .= $this->bottomComment($html, $this->html);
       }
    }
 
