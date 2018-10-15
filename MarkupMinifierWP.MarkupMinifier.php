@@ -13,10 +13,10 @@ class MarkupMinifierWP_MarkupMinifier {
 
    public function __construct($html) {
       $settings = get_option('markup_minifier_wp_options');
-      $this->compress_css = $settings['compress-css'] ? true : false;
-      $this->compress_js = $settings['compress-js'] ? true : false;
-      $this->remove_comments = $settings['remove-comments'] ? true : false;
-      $this->info_comment = $settings['info-comment'] ? true : false;
+      $this->compress_css = array_key_exists('compress-css', $settings) ? true : false;
+      $this->compress_js = array_key_exists('compress-js', $settings) ? true : false;
+      $this->remove_comments = array_key_exists('remove-comments', $settings) ? true : false;
+      $this->info_comment = array_key_exists('info-comment', $settings) ? true : false;
 
       if (!empty($html)) {
          $this->parseHTML($html);
