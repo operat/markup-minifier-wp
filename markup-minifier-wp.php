@@ -20,7 +20,7 @@ define('MARKUP_MINIFIER_WP_URL', 'https://github.com/operat/markup-minifier-wp')
 require_once 'MarkupMinifierWP.MarkupMinifier.php';
 require_once 'MarkupMinifierWP.PluginManager.php';
 
-add_action('get_header', array('MarkupMinifierWP_PluginManager', 'startMinifier'));
+add_action('init', array('MarkupMinifierWP_PluginManager', 'startMinifier'));
 register_activation_hook(__FILE__, array('MarkupMinifierWP_PluginManager', 'setDefaultOptions'));
 
 if (is_admin()) {
